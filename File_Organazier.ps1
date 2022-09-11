@@ -1,9 +1,9 @@
 #Detect the current path location & create a global varible
-$path = Get-Location
+#$path = Get-Location
 
 #Prameters
 #=========
-param([string]$currentPath = $path) 
+param([string]$sourceFiles = "c:\temp\") 
 
 #Functions
 #=========
