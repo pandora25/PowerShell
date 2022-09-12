@@ -28,6 +28,7 @@ function Greate_Folders_Fun($global:path) {
 }
 
 function File_Mover_Func ($path) {
+    Start-Sleep -Seconds 3
     Move-Item -Path $path\*.txt -Destination "$path\TXTs" -Force
     Move-Item -Path $path\*.pdf -Destination "$path\PDFs" -Force
     Move-Item -Path $path\*.JPG -Destination "$path\Images" -Force
@@ -35,7 +36,6 @@ function File_Mover_Func ($path) {
     Move-Item -path "$path\*.csv" -Destination "$path\CSVs" -force
     Move-Item -path "$path\*.xls" -Destination "$path\CSVs" -force
     Move-Item -path "$path\*.xlsx" -Destination "$path\CSVs" -force
-    Start-Sleep -Seconds 3
 }
 
 function Remove_Empty_Folder_Func {
