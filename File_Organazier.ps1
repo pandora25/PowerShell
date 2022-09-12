@@ -27,7 +27,7 @@ function Greate_Folders_Fun($global:path) {
     New-Item -Path "$path\Others" -ItemType Directory -Force
 }
 
-function File_Mover_Func {
+function File_Mover_Func ($path) {
     Move-Item -Path $path\*.txt -Destination "$path\TXTs" -Force
     Move-Item -Path $path\*.pdf -Destination "$path\PDFs" -Force
     Move-Item -Path $path\*.JPG -Destination "$path\Images" -Force
@@ -44,4 +44,4 @@ function Remove_Empty_Folder_Func {
 
 #Processing
 Greate_Folders_Fun($path) 
-File_Mover_Func
+File_Mover_Func "c:\temp"
