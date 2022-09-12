@@ -32,14 +32,14 @@ function File_Mover_Func ($path) {
     Move-Item -Path $path\*.pdf -Destination "$path\PDFs" -Force
     Move-Item -Path $path\*.JPG -Destination "$path\Images" -Force
     Move-Item -Path $path\*.ps1 -Destination "$path\PS-Scripts" -Force
+    Start-Sleep -Seconds 3
     Move-Item -path "$path\*.csv" -Destination "$path\CSVs" -force
     Move-Item -path "$path\*.xls" -Destination "$path\CSVs" -force
     Move-Item -path "$path\*.xlsx" -Destination "$path\CSVs" -force
-    Start-Sleep -Seconds 3
 }
 
 function Remove_Empty_Folder_Func {
-        <# Action to perform if the condition is true #>
+    <# Action to perform if the condition is true #>
 }
 
 #Processing
